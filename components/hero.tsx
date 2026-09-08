@@ -33,7 +33,7 @@ export function Hero() {
   }
 
   return (
-    <main className="site-canvas" id="main-content">
+    <>
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-landscape" aria-hidden="true">
           <video
@@ -116,6 +116,7 @@ export function Hero() {
         </div>
       </section>
       <dialog
+        id="consultation-dialog"
         ref={dialogRef}
         className="consultation-dialog"
         aria-labelledby="consultation-title"
@@ -150,6 +151,6 @@ export function Hero() {
           </button>
         </div>
       </dialog>
-    </main>
+    </>
   )
 }
