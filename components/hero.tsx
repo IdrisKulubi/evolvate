@@ -62,7 +62,10 @@ export function Hero() {
             </span>
             <span className="wordmark-descriptor">Consulting</span>
           </Link>
-          <p className="header-positioning">Clarity. Confidence. Progress.</p>
+          <nav className="header-navigation" aria-label="Primary navigation">
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact us</Link>
+          </nav>
           <button
             className="header-cta"
             onClick={() => dialogRef.current?.showModal()}

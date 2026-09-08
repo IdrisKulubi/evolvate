@@ -50,7 +50,7 @@ const services = [
 
 export function Services() {
   return (
-    <ServiceMotion className="services">
+    <ServiceMotion className="services" id="services">
       <header className="services-intro">
         <h2 id="services-title">
           Services that work

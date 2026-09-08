@@ -5,9 +5,10 @@ import { useEffect, useRef, type ReactNode } from "react"
 type ServiceMotionProps = {
   children: ReactNode
   className?: string
+  id?: string
 }
 
-export function ServiceMotion({ children, className }: ServiceMotionProps) {
+export function ServiceMotion({ children, className, id }: ServiceMotionProps) {
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -77,6 +78,7 @@ export function ServiceMotion({ children, className }: ServiceMotionProps) {
     <section
       ref={sectionRef}
       className={className}
+      id={id}
       aria-labelledby="services-title"
     >
       {children}

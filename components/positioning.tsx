@@ -4,7 +4,11 @@ import { ConsultationTrigger } from "@/components/consultation-trigger"
 
 export function Positioning() {
   return (
-    <section className="positioning" aria-labelledby="positioning-title">
+    <section
+      className="positioning"
+      id="decision-points"
+      aria-labelledby="positioning-title"
+    >
       <header className="positioning-intro">
         <p>Evolvate works where a business is changing</p>
         <h2 id="positioning-title">
