@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" role="img" aria-label="Founder photo placeholder">
+  <rect width="640" height="800" fill="#e8ebe6"/>
+  <rect x="48" y="48" width="544" height="704" fill="#d4ddd6" stroke="#8a9a90" stroke-width="1"/>
+  <text x="320" y="400" text-anchor="middle" fill="#4a5c52" font-family="Georgia, serif" font-size="28">Photo</text>
+  <text x="320" y="440" text-anchor="middle" fill="#6b7d72" font-family="system-ui, sans-serif" font-size="16">Replace with professional portrait</text>
+</svg>

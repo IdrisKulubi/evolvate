@@ -28,7 +28,7 @@ No external brand or website is a prescribed reference. The requirements documen
 
 Evolvate must not resemble a generic consulting template or a conventional blue corporate website. Avoid cheap template styling, stock-photo-heavy pages, excessive card grids, overused gradient blobs, cartoon-style illustration, cluttered layouts, decorative motion, unnecessary popups, and competing primary actions.
 
-Copy must avoid excessive corporate jargon, empty buzzwords, generic claims, long paragraphs, and unsupported superlatives. Prebuilt components must not dictate the brand identity, and visual novelty must never compromise readability, usability, performance, or trust.
+Copy must avoid excessive corporate jargon, empty buzzwords, generic claims, long paragraphs, unsupported superlatives, and overpromising language. Describe how Evolvate supports clients—not guaranteed outcomes. Prebuilt components must not dictate the brand identity, and visual novelty must never compromise readability, usability, performance, or trust.
 
 ## Design Principles
 

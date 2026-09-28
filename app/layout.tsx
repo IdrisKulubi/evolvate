@@ -1,13 +1,14 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 
+import { ConsultationDialog } from "@/components/consultation-dialog"
 import "./globals.css"
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
-  title: "Evolvate Consulting — Strategy that moves businesses forward",
+  title: "Evolvate Consulting — Business, finance, and project support",
   description:
-    "Business development, financial management, and project consulting. Find clarity, build confidence, and move forward with Evolvate.",
+    "Strategic business development, financial management, and project delivery for organizations in Sweden and internationally.",
 }
 
 export default function RootLayout({
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ConsultationDialog />
+      </body>
     </html>
   )
 }

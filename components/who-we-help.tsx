@@ -7,24 +7,24 @@ const audiences = [
   {
     stage: "Start",
     audience: "Startups & founders",
-    title: "Turn the idea into a business case.",
-    body: "Before the first major investment, we help you test demand, sharpen the offer, and understand what the first year will require.",
+    title: "Shape the idea into a business case.",
+    body: "Before a major investment, we help you explore demand, refine the offer, and understand what the first year may require.",
     focus: ["Market evidence", "Commercial model", "First-year cash"],
     moment: "When conviction needs evidence",
   },
   {
     stage: "Grow",
     audience: "Small & medium businesses",
-    title: "Choose what deserves the next investment.",
-    body: "When growth adds complexity, we show where margin is being made, what is consuming capacity, and what the next stage will cost.",
+    title: "Weigh what deserves the next investment.",
+    body: "When growth adds complexity, we help show where margin is made, what uses capacity, and what the next stage may cost.",
     focus: ["Growth priorities", "Cost visibility", "Scaling capacity"],
     moment: "When momentum needs control",
   },
   {
     stage: "Advance",
     audience: "Established organizations",
-    title: "Bring control to work that crosses the organization.",
-    body: "For strategic initiatives with many moving parts, we connect the plan, financial control, ownership, and review cadence.",
+    title: "Support control across complex programmes.",
+    body: "For initiatives with many moving parts, we help connect the plan, financial control, ownership, and review cadence.",
     focus: ["Program direction", "Clear ownership", "Delivery control"],
     moment: "When ambition needs alignment",
   },
@@ -43,8 +43,8 @@ export function WhoWeHelp() {
           <h2 id="audiences-title">Different stages. Different decisions.</h2>
         </div>
         <p>
-          Evolvate meets the business where it is—and brings the clarity its
-          next move demands.
+          Evolvate meets the business where it is—and supports the clarity its
+          next move needs.
         </p>
       </header>
 

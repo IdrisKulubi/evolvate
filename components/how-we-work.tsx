@@ -1,9 +1,12 @@
 "use client"
 
 import { useRef } from "react"
+import { ArrowUpRight } from "@phosphor-icons/react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+import { ConsultationTrigger } from "@/components/consultation-trigger"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -11,22 +14,26 @@ const phases = [
   {
     title: "Frame the decision",
     description:
-      "We agree on the exact choice to make, what success means, and who needs to be involved.",
+      "We align on the choice to explore, what success could look like, and who should be involved.",
+    deliverable: "A short brief agreeing scope, key questions, and people.",
   },
   {
     title: "Build the evidence",
     description:
-      "Research, financial analysis, and operational insight replace assumptions with a clearer picture.",
+      "Research, financial analysis, and operational insight help replace assumptions with a clearer picture.",
+    deliverable: "Analysis of the market, financial, and operational facts.",
   },
   {
-    title: "Choose the direction",
+    title: "Compare the options",
     description:
-      "We put the strongest options side by side so the trade-offs and the best route are visible.",
+      "We lay out strong options so trade-offs and a preferred route are easier to discuss.",
+    deliverable: "A side-by-side view of options, costs, and risks.",
   },
   {
-    title: "Put it to work",
+    title: "Support implementation",
     description:
-      "The decision becomes a practical plan with owners, resources, controls, and a review rhythm.",
+      "We help turn the decision into a practical plan with owners, resources, controls, and review.",
+    deliverable: "A working plan with owners, milestones, and review points.",
   },
 ] as const
 
@@ -52,15 +59,21 @@ export function HowWeWork() {
 
       timeline
         .fromTo(
-          ".work-simple-visual",
+          ".work-simple-aside",
           { y: 20, autoAlpha: 0.6 },
           { y: 0, autoAlpha: 1, duration: 0.65 }
         )
         .fromTo(
+          ".work-simple-rail",
+          { scaleY: 0 },
+          { scaleY: 1, duration: 1.1, ease: "power2.inOut" },
+          "-=0.4"
+        )
+        .fromTo(
           ".work-simple-row",
           { y: 14, autoAlpha: 0.55 },
-          { y: 0, autoAlpha: 1, duration: 0.5, stagger: 0.08 },
-          "-=0.38"
+          { y: 0, autoAlpha: 1, duration: 0.5, stagger: 0.12 },
+          "<0.1"
         )
     },
     { scope: sectionRef }
@@ -74,43 +87,41 @@ export function HowWeWork() {
       aria-labelledby="how-we-work-title"
     >
       <div className="work-simple-layout">
-        <div className="work-simple-visual" aria-hidden="true">
-          <div className="work-brief">
-            <div className="work-brief-meta">
-              <span>Evolvate working brief</span>
-              <span>Shared with your team</span>
-            </div>
-            <h3>From a difficult question to a decision people can act on.</h3>
-            <div className="work-brief-flow">
-              {phases.map((phase, index) => (
-                <div key={phase.title}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <p>{phase.title}</p>
-                  <i aria-hidden="true" />
-                </div>
-              ))}
-            </div>
-            <p className="work-brief-result">
-              Clear direction
-              <span>Evidence · ownership · movement</span>
+        <div className="work-simple-aside">
+          <p className="work-simple-eyebrow">Our approach</p>
+          <h2 id="how-we-work-title">How we work</h2>
+          <p className="work-simple-lead">
+            A structured approach, adapted to the decision your business is
+            facing. Four steps, each with something concrete to show for it.
+          </p>
+
+          <div className="work-simple-note">
+            <p>
+              Every engagement starts by agreeing what is realistic, before any
+              work begins.
             </p>
+            <ConsultationTrigger className="work-simple-action">
+              Talk through your situation
+              <ArrowUpRight size={18} weight="bold" aria-hidden="true" />
+            </ConsultationTrigger>
           </div>
         </div>
 
-        <div className="work-simple-content">
-          <h2 id="how-we-work-title">How we work</h2>
-          <p className="work-simple-lead">
-            A clear method, shaped around the decision your business needs to
-            make.
-          </p>
-
+        <div className="work-simple-steps">
+          <span className="work-simple-rail" aria-hidden="true" />
           <ol className="work-simple-list">
             {phases.map((phase, index) => (
               <li className="work-simple-row" key={phase.title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
+                <span className="work-simple-index" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <div>
                   <h3>{phase.title}</h3>
                   <p>{phase.description}</p>
+                  <p className="work-simple-deliverable">
+                    <span>You receive</span>
+                    {phase.deliverable}
+                  </p>
                 </div>
               </li>
             ))}

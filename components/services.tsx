@@ -7,44 +7,58 @@ const services = [
   {
     name: "Business development",
     layout: "opportunity",
-    statement: "Know where growth is coming from before you chase it.",
+    statement: "Explore where growth could come from before you commit.",
     description:
-      "We test demand, map the competitive field, and turn the strongest opportunity into a plan your team can act on.",
-    focusLabel: "How we find direction",
+      "We help you test demand, understand the competitive field, and shape a plan your team can work from—with evidence behind the direction.",
+    focusLabel: "How we support direction",
     focus: [
-      "Who will buy, and where demand is real",
+      "Who may buy, and where demand looks real",
       "Where you stand against alternatives",
-      "A plan for the next market move",
+      "Options for the next market move",
     ],
-    outcome: "A growth choice with evidence behind it.",
+    outcome: "A clearer growth choice, supported by research and analysis.",
   },
   {
     name: "Financial management",
     layout: "control",
-    statement: "See the decision hiding inside the numbers.",
+    statement: "Connect budgets, forecasts, and costs to the decisions in front of you.",
     description:
-      "We connect budgets, forecasts, costs, and project accounts to the choices leaders need to make now, not after the quarter closes.",
-    focusLabel: "What leaders usually need",
+      "We help link financial information to the questions leaders need to discuss now—not only after the period closes.",
+    focusLabel: "What we often support",
     focus: [
-      "Cash and forecast you can defend in a meeting",
+      "Cash and forecast views you can explain in a meeting",
       "Costs tied to performance, not only the ledger",
       "Project accounts that show where money is going",
     ],
-    outcome: "Financial control that changes what happens next.",
+    outcome: "Stronger financial visibility to inform your next steps.",
   },
   {
     name: "Project management",
     layout: "delivery",
-    statement: "Keep the work moving after the strategy meeting ends.",
+    statement: "Help keep delivery moving after the strategy conversation.",
     description:
-      "We establish ownership, sequence resources, surface risk, and build a practical review rhythm around delivery.",
-    focusLabel: "How delivery stays on track",
+      "We support ownership, sequencing, risk visibility, and a practical review rhythm around the work.",
+    focusLabel: "How we support delivery",
     focus: [
-      "Name owners and the sequence of work",
-      "Match people and budget to the plan",
-      "Review risk before it becomes delay",
+      "Clarify owners and the sequence of work",
+      "Align people and budget with the plan",
+      "Surface risk early enough to act",
     ],
-    outcome: "Critical initiatives that stay accountable.",
+    outcome: "Initiatives with clearer accountability and rhythm.",
+  },
+  {
+    name: "Project controls",
+    layout: "control",
+    statement: "Strengthen cost, schedule, and performance insight on complex work.",
+    description:
+      "We support financial management, project performance, and control strategies— including on large programmes in Sweden.",
+    focusLabel: "Where this applies",
+    focus: [
+      "Cost and progress reporting leaders can use",
+      "Controls aligned to programme scale",
+      "Financial and delivery data brought together",
+    ],
+    outcome: "Project controls that support informed programme decisions.",
   },
 ] as const
 
@@ -59,10 +73,10 @@ export function Services() {
         </h2>
         <div className="services-intro-copy">
           <p>
-            A growth plan changes cash. A financial choice changes delivery. We
-            connect all three before the gaps get expensive.
+            Growth, finance, and delivery influence each other. We help you
+            look at them in one view so trade-offs are easier to see.
           </p>
-          <span>One business view. Three connected disciplines.</span>
+          <span>Strategy · finance · delivery · controls</span>
         </div>
       </header>
 
@@ -108,11 +122,11 @@ export function Services() {
 
       <footer className="services-footer">
         <p>
-          Not sure which service fits? Start with the decision that is hardest
-          to make.
+          Not sure which area fits? Tell us about the decision or challenge you
+          are weighing.
         </p>
         <ConsultationTrigger className="services-action">
-          Bring us the decision
+          Start a conversation
           <ArrowUpRight size={18} weight="bold" aria-hidden="true" />
         </ConsultationTrigger>
       </footer>
