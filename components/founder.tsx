@@ -15,6 +15,14 @@ export function FounderSection({ variant = "full" }: FounderSectionProps) {
         className="founder-teaser"
         aria-labelledby="founder-teaser-title"
       >
+        <div className="founder-teaser-photo">
+          <Image
+            src="/images/project-desk.png"
+            alt="Engineering drawings, a hard hat, and a cost report on a desk"
+            fill
+            sizes="(min-width: 900px) 40vw, 100vw"
+          />
+        </div>
         <div className="founder-teaser-copy">
           <p>Leadership</p>
           <h2 id="founder-teaser-title">
@@ -22,8 +30,8 @@ export function FounderSection({ variant = "full" }: FounderSectionProps) {
           </h2>
           <p>
             {founder.name} leads Evolvate with a background in project controls,
-            financial management, and delivery—including work on mega projects in
-            Sweden and experience in aerospace and construction.
+            financial management, and delivery—including work on mega projects
+            in Sweden and experience in aerospace and construction.
           </p>
           <Link className="founder-teaser-link" href="/about">
             Meet the founder

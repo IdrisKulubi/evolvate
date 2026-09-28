@@ -153,6 +153,23 @@ Elizabeth’s statement (primary source for About + services tone):
 
 ---
 
+## Photography (placeholder images)
+
+Three AI-generated placeholder photos in `public/images/`, rendered via `components/editorial-photo.tsx` and the founder teaser:
+
+| Image | Placement |
+| ----- | --------- |
+| `project-site.png` | Full-width band after “Three moments” |
+| `working-session.png` | Services intro |
+| `project-desk.png` | Founder teaser (home) |
+
+### Before launch
+
+- [ ] Replace with real photos (Elizabeth’s projects, workshops) or licensed stock.
+- [ ] Do not present the generated people as Evolvate staff or clients.
+
+---
+
 ## Phase 6: Tutorials (deferred)
 
 **Goal (future):** Practical guides with visuals—not walls of text. Possible `/resources` with step-by-step topics (cash forecast, project controls basics, etc.).

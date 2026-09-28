@@ -1958,11 +1958,74 @@ a:focus-visible {
   transform: translate(2px, -2px);
 }
 
+.editorial-photo {
+  margin: 0;
+  color: var(--ink);
+}
+.editorial-photo-frame {
+  position: relative;
+  overflow: hidden;
+  background: oklch(0.9 0.02 151);
+}
+.editorial-photo-frame img {
+  object-fit: cover;
+}
+.editorial-photo-bleed .editorial-photo-frame {
+  height: clamp(360px, 52vw, 760px);
+}
+.editorial-photo-inset {
+  margin-bottom: 88px;
+}
+.editorial-photo-inset .editorial-photo-frame {
+  aspect-ratio: 21 / 9;
+  border-radius: 14px;
+}
+.editorial-photo figcaption {
+  display: flex;
+  gap: 32px;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.editorial-photo-bleed figcaption {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding: 24px 64px 0;
+}
+.editorial-photo figcaption span {
+  flex-shrink: 0;
+  color: oklch(0.44 0.02 164);
+  font-size: 0.8125rem;
+}
+.editorial-photo figcaption p {
+  max-width: 40ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  text-align: right;
+  text-wrap: pretty;
+}
 .founder-teaser {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(40px, 7vw, 112px);
+  align-items: center;
   width: min(100%, 1312px);
   margin-inline: auto;
   padding: clamp(72px, 8vw, 112px) 64px;
   border-top: 1px solid oklch(0.27 0.025 164 / 12%);
+}
+.founder-teaser-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 14px;
+  background: oklch(0.9 0.02 151);
+}
+.founder-teaser-photo img {
+  object-fit: cover;
 }
 .founder-teaser-copy > p:first-child {
   margin: 0 0 20px;
@@ -2345,6 +2408,28 @@ a:focus-visible {
   .founder,
   .testimonials-intro {
     padding-inline: 24px;
+  }
+  .founder-teaser {
+    grid-template-columns: 1fr;
+  }
+  .founder-teaser-photo {
+    aspect-ratio: 4 / 3;
+  }
+  .editorial-photo figcaption {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .editorial-photo figcaption p {
+    text-align: left;
+  }
+  .editorial-photo-bleed figcaption {
+    padding-inline: 24px;
+  }
+  .editorial-photo-inset {
+    margin-bottom: 56px;
+  }
+  .editorial-photo-inset .editorial-photo-frame {
+    aspect-ratio: 4 / 3;
   }
   .testimonials-marquee-control {
     margin-inline: 24px;

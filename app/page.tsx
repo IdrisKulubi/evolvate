@@ -1,3 +1,4 @@
+import { EditorialPhoto } from "@/components/editorial-photo"
 import { Footer } from "@/components/footer"
 import { FounderSection } from "@/components/founder"
 import { Hero } from "@/components/hero"
@@ -12,6 +13,13 @@ export default function Page() {
     <main className="site-canvas" id="main-content">
       <Hero />
       <Positioning />
+      <EditorialPhoto
+        variant="bleed"
+        src="/images/project-site.png"
+        alt="Tunnel portal and bridge under construction beside a lake, surrounded by pine forest"
+        label="Complex delivery"
+        caption="Major programmes need cost, schedule, and delivery in one view."
+      />
       <Services />
       <HowWeWork />
       <WhoWeHelp />

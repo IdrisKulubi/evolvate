@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr"
 
 import { ConsultationTrigger } from "@/components/consultation-trigger"
+import { EditorialPhoto } from "@/components/editorial-photo"
 import { ServiceMotion } from "@/components/service-motion"
 
 const services = [
@@ -21,7 +22,8 @@ const services = [
   {
     name: "Financial management",
     layout: "control",
-    statement: "Connect budgets, forecasts, and costs to the decisions in front of you.",
+    statement:
+      "Connect budgets, forecasts, and costs to the decisions in front of you.",
     description:
       "We help link financial information to the questions leaders need to discuss now—not only after the period closes.",
     focusLabel: "What we often support",
@@ -49,7 +51,8 @@ const services = [
   {
     name: "Project controls",
     layout: "control",
-    statement: "Strengthen cost, schedule, and performance insight on complex work.",
+    statement:
+      "Strengthen cost, schedule, and performance insight on complex work.",
     description:
       "We support financial management, project performance, and control strategies— including on large programmes in Sweden.",
     focusLabel: "Where this applies",
@@ -73,12 +76,19 @@ export function Services() {
         </h2>
         <div className="services-intro-copy">
           <p>
-            Growth, finance, and delivery influence each other. We help you
-            look at them in one view so trade-offs are easier to see.
+            Growth, finance, and delivery influence each other. We help you look
+            at them in one view so trade-offs are easier to see.
           </p>
           <span>Strategy · finance · delivery · controls</span>
         </div>
       </header>
+
+      <EditorialPhoto
+        src="/images/working-session.png"
+        alt="Three colleagues reviewing printed project schedules and cost charts at a table"
+        label="In practice"
+        caption="Working sessions built around your numbers, your plan, and your people."
+      />
 
       <div className="services-register">
         {services.map((service) => (
