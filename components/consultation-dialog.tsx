@@ -1,7 +1,14 @@
 "use client"
 
 import { useRef } from "react"
-import { ArrowUpRight, X } from "@phosphor-icons/react"
+import Link from "next/link"
+import { EnvelopeSimple, X } from "@phosphor-icons/react"
+
+const prompts = [
+  { label: "Your context", detail: "What is happening in the business now?" },
+  { label: "The decision", detail: "What needs to become clearer?" },
+  { label: "The timing", detail: "When does movement need to begin?" },
+] as const
 
 export function ConsultationDialog() {
   const dialogRef = useRef<HTMLDialogElement>(null)
@@ -25,22 +32,33 @@ export function ConsultationDialog() {
           <X size={22} />
         </button>
         <p className="dialog-label">Evolvate Consulting</p>
-        <h2 id="consultation-title">
-          Every next chapter
-          <br />
-          starts with a conversation.
-        </h2>
+        <h2 id="consultation-title">A short note is enough to begin.</h2>
         <p>
-          Consultation booking is coming soon. We would like to hear about your
-          business, your challenges, and what you are working toward—so we can
-          see if we are the right partner to support you.
+          Tell us what is changing and what you need to decide. We read every
+          enquiry and reply from Sweden.
         </p>
-        <button
-          className="consultation-button"
+        <a
+          className="consultation-button dialog-email"
+          href="mailto:info@evolvateconsulting.com?subject=Consultation%20enquiry"
+        >
+          <EnvelopeSimple size={20} aria-hidden="true" />
+          info@evolvateconsulting.com
+        </a>
+        <ul className="dialog-prompts">
+          {prompts.map((prompt) => (
+            <li key={prompt.label}>
+              <span>{prompt.label}</span>
+              {prompt.detail}
+            </li>
+          ))}
+        </ul>
+        <Link
+          className="dialog-contact-link"
+          href="/contact"
           onClick={() => dialogRef.current?.close()}
         >
-          Back to Evolvate <ArrowUpRight size={20} aria-hidden="true" />
-        </button>
+          Or visit the contact page
+        </Link>
       </div>
     </dialog>
   )

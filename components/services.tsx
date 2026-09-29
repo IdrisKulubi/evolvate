@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr"
-
 import { ConsultationTrigger } from "@/components/consultation-trigger"
 import { EditorialPhoto } from "@/components/editorial-photo"
 import { ServiceMotion } from "@/components/service-motion"
@@ -8,12 +6,12 @@ const services = [
   {
     name: "Business development",
     layout: "opportunity",
-    statement: "Explore where growth could come from before you commit.",
+    statement: "See where growth can come from before you commit.",
     description:
-      "We help you test demand, understand the competitive field, and shape a plan your team can work from—with evidence behind the direction.",
+      "We help you test demand, understand the competitive field, and shape a plan your team can work from, with evidence behind the direction.",
     focusLabel: "How we support direction",
     focus: [
-      "Who may buy, and where demand looks real",
+      "Who is likely to buy, and where demand looks real",
       "Where you stand against alternatives",
       "Options for the next market move",
     ],
@@ -25,7 +23,7 @@ const services = [
     statement:
       "Connect budgets, forecasts, and costs to the decisions in front of you.",
     description:
-      "We help link financial information to the questions leaders need to discuss now—not only after the period closes.",
+      "We help link financial information to the questions leaders need to discuss now, not only after the period closes.",
     focusLabel: "What we often support",
     focus: [
       "Cash and forecast views you can explain in a meeting",
@@ -54,7 +52,7 @@ const services = [
     statement:
       "Strengthen cost, schedule, and performance insight on complex work.",
     description:
-      "We support financial management, project performance, and control strategies— including on large programmes in Sweden.",
+      "We support financial management, project performance, and control strategies, including on large programmes in Sweden.",
     focusLabel: "Where this applies",
     focus: [
       "Cost and progress reporting leaders can use",
@@ -137,7 +135,6 @@ export function Services() {
         </p>
         <ConsultationTrigger className="services-action">
           Start a conversation
-          <ArrowUpRight size={18} weight="bold" aria-hidden="true" />
         </ConsultationTrigger>
       </footer>
     </ServiceMotion>

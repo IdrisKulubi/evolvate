@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr"
+
+import { ConsultationTrigger } from "@/components/consultation-trigger"
 
 type InteriorHeaderProps = {
   current?: "about" | "contact"
@@ -30,9 +31,9 @@ export function InteriorHeader({ current }: InteriorHeaderProps) {
         </Link>
       </nav>
 
-      <Link className="header-cta" href="/contact">
-        Let&apos;s talk <ArrowUpRight size={17} aria-hidden="true" />
-      </Link>
+      <ConsultationTrigger className="header-cta">
+        Let&apos;s talk
+      </ConsultationTrigger>
     </header>
   )
 }

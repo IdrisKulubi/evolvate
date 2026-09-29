@@ -17,22 +17,29 @@ export function FounderSection({ variant = "full" }: FounderSectionProps) {
       >
         <div className="founder-teaser-photo">
           <Image
-            src="/images/project-desk.png"
-            alt="Engineering drawings, a hard hat, and a cost report on a desk"
+            src={founder.photoSrc}
+            alt={founder.photoAlt}
             fill
             sizes="(min-width: 900px) 40vw, 100vw"
           />
         </div>
         <div className="founder-teaser-copy">
           <p>Leadership</p>
-          <h2 id="founder-teaser-title">
-            Experience across programmes, sectors, and scale.
-          </h2>
+          <h2 id="founder-teaser-title">{founder.name}</h2>
+          <p className="founder-teaser-role">{founder.role}</p>
           <p>
-            {founder.name} leads Evolvate with a background in project controls,
-            financial management, and delivery—including work on mega projects
-            in Sweden and experience in aerospace and construction.
+            {founder.name} leads Evolvate with hands-on work in project
+            controls, financial management, and delivery, including mega
+            projects in Sweden and experience in aerospace and construction.
           </p>
+          <ul className="founder-teaser-credentials">
+            {founder.highlights.map((item) => (
+              <li key={item.period}>
+                <span>{item.period}</span>
+                {item.detail}
+              </li>
+            ))}
+          </ul>
           <Link className="founder-teaser-link" href="/about">
             Meet the founder
             <ArrowUpRight size={18} weight="bold" aria-hidden="true" />

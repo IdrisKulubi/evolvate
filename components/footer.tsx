@@ -1,9 +1,11 @@
 import Link from "next/link"
-import { ArrowUp, ArrowUpRight } from "@phosphor-icons/react/dist/ssr"
+import { ArrowUp } from "@phosphor-icons/react/dist/ssr"
+
+import { ConsultationTrigger } from "@/components/consultation-trigger"
 
 const navigation = [
   { label: "Start", href: "/" },
-  { label: "Who we help", href: "/#who-we-help" },
+  { label: "Who we work with", href: "/#decision-points" },
   { label: "Services", href: "/#services" },
   { label: "How we work", href: "/#how-we-work" },
   { label: "About", href: "/about" },
@@ -14,6 +16,7 @@ const expertise = [
   "Business development",
   "Financial management",
   "Project management",
+  "Project controls",
 ] as const
 
 export function Footer() {
@@ -29,10 +32,9 @@ export function Footer() {
               <em>clear.</em>
             </h2>
           </div>
-          <Link className="footer-cta" href="/contact">
+          <ConsultationTrigger className="footer-cta">
             Start a conversation
-            <ArrowUpRight size={19} weight="bold" aria-hidden="true" />
-          </Link>
+          </ConsultationTrigger>
         </div>
 
         <div className="footer-watermark" aria-hidden="true">

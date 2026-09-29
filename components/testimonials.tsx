@@ -17,7 +17,7 @@ export function Testimonials() {
         <p>Client perspectives</p>
         <h2 id="testimonials-title">What partners say about working with us</h2>
         <p className="testimonials-demo-note" role="note">
-          Demo content for layout review—replace with approved testimonials
+          Demo content for layout review. Replace with approved testimonials
           before launch.
         </p>
       </header>

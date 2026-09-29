@@ -11,9 +11,9 @@ export interface FounderProfile {
 
 // TODO: replace with real data from Elizabeth (name, photo, LinkedIn, verified bio)
 export const founder: FounderProfile = {
-  name: "Elizabeth ",
+  name: "Elizabeth",
   role: "Founder & Principal Consultant",
-  photoSrc: "/founder/placeholder.svg",
+  photoSrc: "/founder/founder.jpeg",
   photoAlt: "Portrait placeholder for Evolvate founder",
   bio: [
     "Evolvate is led by a consultant with hands-on experience in business development, financial management, and project delivery across Sweden and international markets.",

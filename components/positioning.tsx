@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr"
-
 import { ConsultationTrigger } from "@/components/consultation-trigger"
 
 export function Positioning() {
@@ -28,7 +26,7 @@ export function Positioning() {
           </h3>
           <p className="positioning-copy">
             We help test the market, sharpen the offer, and put numbers under
-            the first year—so you start with evidence as well as conviction.
+            the first year, so you start with evidence as well as conviction.
           </p>
           <dl className="start-decisions">
             <div>
@@ -37,11 +35,11 @@ export function Positioning() {
             </div>
             <div>
               <dt>Offer</dt>
-              <dd>What could earn the first sale</dd>
+              <dd>What earns the first sale</dd>
             </div>
             <div>
               <dt>Cash</dt>
-              <dd>What the first year may require</dd>
+              <dd>What the first year requires</dd>
             </div>
           </dl>
         </article>
@@ -56,12 +54,10 @@ export function Positioning() {
               The numbers should inform the next move.
             </p>
           </div>
-          <h3 id="grow-title">
-            Growth adds cost when the numbers lag behind.
-          </h3>
+          <h3 id="grow-title">Growth adds cost when the numbers lag behind.</h3>
           <p className="positioning-copy">
-            We help growing businesses weigh where to invest, what to pause,
-            and what the next stage may require.
+            We help growing businesses weigh where to invest, what to pause, and
+            what the next stage requires.
           </p>
           <div
             className="growth-decisions"
@@ -69,20 +65,19 @@ export function Positioning() {
           >
             <div>
               <span>Invest</span>
-              <p>The offers and markets that may deserve more attention.</p>
+              <p>The offers and markets that deserve more attention.</p>
             </div>
             <div>
               <span>Stop</span>
-              <p>The work that may be consuming margin without progress.</p>
+              <p>The work consuming margin without progress.</p>
             </div>
             <div>
               <span>Fund</span>
-              <p>The people, capacity, and cash the next stage may need.</p>
+              <p>The people, capacity, and cash the next stage needs.</p>
             </div>
           </div>
           <ConsultationTrigger className="positioning-action positioning-action-light">
-            Talk through your next growth decision
-            <ArrowUpRight size={18} weight="bold" aria-hidden="true" />
+            Start a conversation
           </ConsultationTrigger>
         </article>
 
@@ -100,8 +95,8 @@ export function Positioning() {
               execution.
             </h3>
             <p className="positioning-copy">
-              We help bring the plan, ownership, financial control, and
-              decision structure into one operating rhythm.
+              We help bring the plan, ownership, financial control, and decision
+              structure into one operating rhythm.
             </p>
           </div>
           <ol
@@ -126,6 +121,13 @@ export function Positioning() {
             </li>
           </ol>
         </article>
+      </div>
+
+      <div className="positioning-close">
+        <p>Not sure where your challenge fits?</p>
+        <ConsultationTrigger className="positioning-close-action">
+          Start a conversation
+        </ConsultationTrigger>
       </div>
     </section>
   )

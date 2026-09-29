@@ -1,6 +1,13 @@
 "use client"
 
-import { useEffect, useRef, type ReactNode } from "react"
+import { useRef, type ReactNode } from "react"
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+import { REVEAL, scrollEnter } from "@/lib/motion/reveal"
+
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 type ServiceMotionProps = {
   children: ReactNode
@@ -11,68 +18,65 @@ type ServiceMotionProps = {
 export function ServiceMotion({ children, className, id }: ServiceMotionProps) {
   const sectionRef = useRef<HTMLElement>(null)
 
-  useEffect(() => {
-    const section = sectionRef.current
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia()
 
-    if (
-      !section ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      return
-    }
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        const rows = gsap.utils.toArray<HTMLElement>("[data-service-row]")
 
-    const rows = Array.from(
-      section.querySelectorAll<HTMLElement>("[data-service-row]")
-    )
-
-    const observer = new IntersectionObserver(
-      (entries, activeObserver) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue
-
-          const row = entry.target as HTMLElement
-          const parts = Array.from(
-            row.querySelectorAll<HTMLElement>("[data-service-part]")
-          )
+        rows.forEach((row, rowIndex) => {
           const rule = row.querySelector<HTMLElement>("[data-service-rule]")
+          const parts = row.querySelectorAll<HTMLElement>("[data-service-part]")
 
-          rule?.animate(
-            [
-              { transform: "scaleX(0)", transformOrigin: "left" },
-              { transform: "scaleX(1)", transformOrigin: "left" },
-            ],
-            {
-              duration: 700,
-              easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-              fill: "forwards",
-            }
-          )
+          if (!rule || parts.length === 0) return
 
-          parts.forEach((part, index) => {
-            part.animate(
-              [
-                { transform: "translateY(10px)" },
-                { transform: "translateY(0)" },
-              ],
+          gsap.set(rule, { scaleX: 0, transformOrigin: "left center" })
+
+          gsap
+            .timeline({
+              scrollTrigger: scrollEnter(row, REVEAL.blockStart),
+              defaults: { ease: REVEAL.ease },
+            })
+            .to(rule, {
+              scaleX: 1,
+              duration: 0.85,
+              ease: "power2.inOut",
+            })
+            .from(
+              parts,
               {
-                duration: 480,
-                delay: 50 + index * 45,
-                easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-                fill: "forwards",
-              }
+                y: 32,
+                autoAlpha: 0,
+                duration: 0.75,
+                stagger: {
+                  each: 0.08,
+                  from: rowIndex % 2 === 0 ? "start" : "end",
+                },
+              },
+              "-=0.42"
             )
+        })
+
+        const servicesFooter = sectionRef.current?.querySelector(
+          ".services-footer"
+        )
+        if (servicesFooter) {
+          gsap.from(".services-footer > p, .services-action", {
+            y: REVEAL.liftSoft,
+            autoAlpha: 0,
+            duration: REVEAL.duration * 0.85,
+            ease: REVEAL.ease,
+            stagger: 0.1,
+            scrollTrigger: scrollEnter(servicesFooter, REVEAL.blockStart),
           })
-
-          activeObserver.unobserve(row)
         }
-      },
-      { threshold: 0.22 }
-    )
+      })
 
-    rows.forEach((row) => observer.observe(row))
-
-    return () => observer.disconnect()
-  }, [])
+      return () => mm.revert()
+    },
+    { scope: sectionRef }
+  )
 
   return (
     <section
