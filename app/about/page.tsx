@@ -1,16 +1,25 @@
-import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr"
 
 import { Footer } from "@/components/footer"
 import { FounderSection } from "@/components/founder"
 import { InteriorHeader } from "@/components/interior-header"
+import { JsonLd } from "@/components/seo/json-ld"
+import { buildPageMetadata } from "@/lib/seo/metadata"
+import {
+  breadcrumbSchema,
+  graphDocument,
+  webPageSchema,
+} from "@/lib/seo/schema"
 
-export const metadata: Metadata = {
-  title: "About Evolvate Consulting",
-  description:
-    "Meet Evolvate Consulting and the principles behind our approach to business development, financial management, and project delivery in Sweden and internationally.",
-}
+const aboutPageDescription =
+  "Meet Evolvate Consulting and the principles behind our approach to business development, financial management, and project delivery in Sweden and internationally."
+
+export const metadata = buildPageMetadata({
+  title: "About",
+  description: aboutPageDescription,
+  path: "/about",
+})
 
 const principles = [
   {
@@ -28,8 +37,21 @@ const principles = [
 ] as const
 
 export default function AboutPage() {
+  const pageSchema = graphDocument(
+    webPageSchema({
+      name: "About Evolvate Consulting",
+      description: aboutPageDescription,
+      path: "/about",
+    }),
+    breadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+    ])
+  )
+
   return (
     <main className="interior-page" id="main-content">
+      <JsonLd data={pageSchema} />
       <InteriorHeader current="about" />
 
       <section className="about-hero" aria-labelledby="about-title">

@@ -6,6 +6,9 @@ import { HowWeWork } from "@/components/how-we-work"
 import { Positioning } from "@/components/positioning"
 import { Services } from "@/components/services"
 import { Testimonials } from "@/components/testimonials"
+import { buildHomeMetadata } from "@/lib/seo/metadata"
+
+export const metadata = buildHomeMetadata()
 
 export default function Page() {
   return (

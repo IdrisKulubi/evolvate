@@ -1,19 +1,41 @@
-import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowUpRight, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr"
 
 import { Footer } from "@/components/footer"
 import { InteriorHeader } from "@/components/interior-header"
+import { JsonLd } from "@/components/seo/json-ld"
+import { buildPageMetadata } from "@/lib/seo/metadata"
+import {
+  breadcrumbSchema,
+  graphDocument,
+  webPageSchema,
+} from "@/lib/seo/schema"
 
-export const metadata: Metadata = {
-  title: "Contact Evolvate Consulting",
-  description:
-    "Contact Evolvate Consulting to discuss your next business, financial, or project decision.",
-}
+const contactPageDescription =
+  "Contact Evolvate Consulting to discuss your next business, financial, or project decision. Based in Sweden, working with clients internationally."
+
+export const metadata = buildPageMetadata({
+  title: "Contact",
+  description: contactPageDescription,
+  path: "/contact",
+})
 
 export default function ContactPage() {
+  const pageSchema = graphDocument(
+    webPageSchema({
+      name: "Contact Evolvate Consulting",
+      description: contactPageDescription,
+      path: "/contact",
+    }),
+    breadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Contact", path: "/contact" },
+    ])
+  )
+
   return (
     <main className="interior-page" id="main-content">
+      <JsonLd data={pageSchema} />
       <InteriorHeader current="contact" />
 
       <section className="contact-hero" aria-labelledby="contact-title">

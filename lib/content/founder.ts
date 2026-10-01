@@ -14,7 +14,7 @@ export const founder: FounderProfile = {
   name: "Elizabeth",
   role: "Founder & Principal Consultant",
   photoSrc: "/founder/founder.jpeg",
-  photoAlt: "Portrait placeholder for Evolvate founder",
+  photoAlt: "Elizabeth, Founder and Principal Consultant at Evolvate Consulting",
   bio: [
     "Evolvate is led by a consultant with hands-on experience in business development, financial management, and project delivery across Sweden and international markets.",
     "Current work includes project controls on mega projects in Sweden, alongside advisory support for leaders navigating strategy, performance, and complex programmes.",
