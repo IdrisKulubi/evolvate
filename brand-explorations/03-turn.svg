@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">Evolvate logo concept 3 — The Turn</title>
+  <desc id="desc">A single continuous line changes direction and forms a subtle E beside the Evolvate wordmark.</desc>
+  <rect width="1000" height="300" fill="#F5F6F0"/>
+  <path d="M195 91H91V150H174L145 179H91V209H196" fill="none" stroke="#315647" stroke-width="15" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M174 150L196 128" fill="none" stroke="#BB6F4C" stroke-width="15" stroke-linecap="square"/>
+  <text x="260" y="172" fill="#20382E" font-family="Inter, Arial, sans-serif" font-size="82" font-weight="700" letter-spacing="-5.5">evolvate</text>
+  <text x="266" y="208" fill="#527466" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="8">CONSULTING</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">Evolvate logo concept 5 — Editorial Wordmark</title>
+  <desc id="desc">A confident Evolvate wordmark with a small open corner as its signature.</desc>
+  <rect width="1000" height="300" fill="#F5F6F0"/>
+  <text x="71" y="171" fill="#20382E" font-family="Georgia, serif" font-size="99" font-weight="400" letter-spacing="-6">evolvate</text>
+  <path d="M407 91H431V115" fill="none" stroke="#BB6F4C" stroke-width="8" stroke-linecap="square"/>
+  <path d="M72 194H492" fill="none" stroke="#315647" stroke-width="2"/>
+  <text x="76" y="228" fill="#527466" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="10">CONSULTING</text>
+</svg>

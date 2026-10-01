@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 160" role="img" aria-labelledby="title desc">
+  <title id="title">Evolvate symbol — Common Ground</title>
+  <desc id="desc">Two offset square frames joined by a warm central line.</desc>
+  <g fill="none" stroke-width="11" stroke-linejoin="miter">
+    <path d="M11 6H105V100H11Z" stroke="#2D5142"/>
+    <path d="M63 34H157V128H63Z" stroke="#7FA390"/>
+  </g>
+  <path d="M63 67H105" fill="none" stroke="#BD7351" stroke-width="11"/>
+</svg>

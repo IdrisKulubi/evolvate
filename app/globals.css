@@ -190,25 +190,17 @@ a:focus-visible {
   justify-content: space-between;
   gap: 24px;
 }
-.wordmark {
-  display: flex;
-  flex-direction: column;
+.brand-logo {
+  display: inline-flex;
+  flex: none;
+  width: 224px;
+  align-items: center;
   text-decoration: none;
-  color: inherit;
-  line-height: 1;
 }
-.wordmark > span:first-child {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-}
-.wordmark-period {
-  color: oklch(0.43 0.065 150);
-}
-.wordmark-descriptor {
-  font-size: 0.6875rem;
-  letter-spacing: 0.18em;
-  margin-top: 8px;
+.brand-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .header-positioning {
   margin: 0;
@@ -448,8 +440,8 @@ a:focus-visible {
   .header-navigation {
     gap: 18px;
   }
-  .wordmark > span:first-child {
-    font-size: 1.75rem;
+  .brand-logo {
+    width: 186px;
   }
   .hero-content {
     padding-top: 96px;
@@ -2643,16 +2635,14 @@ a:focus-visible {
 .footer-watermark {
   align-self: center;
   margin: auto 0 clamp(48px, 8vh, 96px);
-  color: oklch(1 0 0 / 16%);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(5rem, 16vw, 14rem);
-  line-height: 0.78;
-  letter-spacing: -0.04em;
+  width: clamp(180px, 24vw, 320px);
+  opacity: 0.24;
   user-select: none;
-  white-space: nowrap;
 }
-.footer-watermark span {
-  color: oklch(0.76 0.09 151 / 36%);
+.footer-watermark img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .footer-directory {
   display: grid;
@@ -2662,27 +2652,9 @@ a:focus-visible {
   border-top: 1px solid oklch(1 0 0 / 20%);
   color: white;
 }
-.footer-wordmark {
-  display: inline-flex;
-  width: fit-content;
-  height: fit-content;
-  gap: 12px;
-  align-items: baseline;
-  color: white;
-  text-decoration: none;
-}
-.footer-wordmark > span {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.5rem;
-  line-height: 1;
-  letter-spacing: -0.03em;
-}
-.footer-wordmark > span > span {
-  color: oklch(0.76 0.09 151);
-}
-.footer-wordmark small {
-  color: oklch(1 0 0 / 58%);
-  font-size: 0.625rem;
+.footer-brand-logo {
+  width: 210px;
+  align-self: start;
 }
 .footer-links {
   display: grid;
@@ -2774,7 +2746,7 @@ a:focus-visible {
   }
   .footer-watermark {
     margin-block: auto 56px;
-    font-size: clamp(4.5rem, 25vw, 7rem);
+    width: clamp(164px, 34vw, 230px);
   }
   .footer-links {
     grid-template-columns: 1fr 1fr;

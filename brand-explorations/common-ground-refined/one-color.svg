@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 220" role="img" aria-labelledby="title desc">
+  <title id="title">Evolvate Consulting — one-color logo</title>
+  <desc id="desc">The Common Ground logo rendered in one dark green color.</desc>
+  <g fill="none" stroke="#20382E" stroke-width="11" stroke-linejoin="miter">
+    <path d="M33 49H127V143H33Z"/>
+    <path d="M85 77H179V171H85Z"/>
+    <path d="M85 110H127"/>
+  </g>
+  <text x="224" y="128" fill="#20382E" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" letter-spacing="-4">evolvate</text>
+  <text x="229" y="159" fill="#20382E" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="7">CONSULTING</text>
+</svg>

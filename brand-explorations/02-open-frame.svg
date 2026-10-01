@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">Evolvate logo concept 2 — Open Frame</title>
+  <desc id="desc">An open geometric frame reveals a precise point of focus beside the Evolvate wordmark.</desc>
+  <rect width="1000" height="300" fill="#F5F6F0"/>
+  <g fill="none" stroke="#294B41" stroke-width="15" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M187 94H78V206H187V171"/>
+    <path d="M121 150H207"/>
+  </g>
+  <circle cx="207" cy="150" r="9" fill="#BD704D"/>
+  <text x="270" y="171" fill="#20382E" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="500" letter-spacing="-4">evolvate</text>
+  <text x="273" y="207" fill="#527466" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="7.5">CONSULTING</text>
+</svg>

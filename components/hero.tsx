@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { BrandLogo } from "@/components/brand-logo"
 import { ConsultationTrigger } from "@/components/consultation-trigger"
 
 export function Hero() {
@@ -18,16 +19,7 @@ export function Hero() {
           />
         </div>
         <header className="hero-header">
-          <Link
-            className="wordmark"
-            href="/"
-            aria-label="Evolvate Consulting home"
-          >
-            <span>
-              evolvate<span className="wordmark-period">.</span>
-            </span>
-            <span className="wordmark-descriptor">Consulting</span>
-          </Link>
+          <BrandLogo />
           <nav className="header-navigation" aria-label="Primary navigation">
             <Link href="/about">About</Link>
             <Link href="/contact">Contact us</Link>

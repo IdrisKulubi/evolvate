@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">Evolvate logo concept 4 — Common Ground</title>
+  <desc id="desc">Two offset planes share one central line, expressing alignment between strategy and execution.</desc>
+  <rect width="1000" height="300" fill="#F5F6F0"/>
+  <path d="M67 100H145V178H67Z" fill="none" stroke="#315647" stroke-width="14"/>
+  <path d="M117 122H195V200H117Z" fill="none" stroke="#769D8A" stroke-width="14"/>
+  <path d="M117 150H145" stroke="#BB6F4C" stroke-width="14" stroke-linecap="square"/>
+  <text x="260" y="170" fill="#20382E" font-family="Inter, Arial, sans-serif" font-size="79" font-weight="600" letter-spacing="-4.8">evolvate</text>
+  <text x="266" y="207" fill="#527466" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="8">CONSULTING</text>
+</svg>

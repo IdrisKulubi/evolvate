@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">Evolvate logo concept 1 — Confluence</title>
+  <desc id="desc">Three distinct paths become one clear direction beside the Evolvate wordmark.</desc>
+  <rect width="1000" height="300" fill="#F5F6F0"/>
+  <g fill="none" stroke="#315647" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M66 91H111L153 150H211"/>
+    <path d="M66 150H211"/>
+    <path d="M66 209H111L153 150"/>
+  </g>
+  <circle cx="211" cy="150" r="10" fill="#BB6F4C"/>
+  <text x="271" y="170" fill="#20382E" font-family="Inter, Arial, sans-serif" font-size="79" font-weight="600" letter-spacing="-5">evolvate</text>
+  <text x="278" y="207" fill="#527466" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="8">CONSULTING</text>
+</svg>

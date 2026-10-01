@@ -1,6 +1,8 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowUp } from "@phosphor-icons/react/dist/ssr"
 
+import { BrandLogo } from "@/components/brand-logo"
 import { ConsultationTrigger } from "@/components/consultation-trigger"
 
 const navigation = [
@@ -38,16 +40,16 @@ export function Footer() {
         </div>
 
         <div className="footer-watermark" aria-hidden="true">
-          evolvate<span>.</span>
+          <Image
+            src="/brand/evolvate-symbol-reversed.svg"
+            alt=""
+            width={168}
+            height={140}
+          />
         </div>
 
         <div className="footer-directory">
-          <Link className="footer-wordmark" href="/">
-            <span>
-              evolvate<span>.</span>
-            </span>
-            <small>Consulting</small>
-          </Link>
+          <BrandLogo className="footer-brand-logo" variant="reversed" />
 
           <nav className="footer-links" aria-label="Footer navigation">
             <div>

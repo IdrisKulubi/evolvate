@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 140" role="img" aria-labelledby="title">
+  <title id="title">Evolvate symbol</title>
+  <g fill="none" stroke-width="11" stroke-linejoin="miter">
+    <path d="M11 6H105V100H11Z" stroke="#F2F4EB"/>
+    <path d="M63 34H157V128H63Z" stroke="#A8C5B1"/>
+  </g>
+  <path d="M63 67H105" fill="none" stroke="#E39A72" stroke-width="11"/>
+</svg>

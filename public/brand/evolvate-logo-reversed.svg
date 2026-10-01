@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 35 485 150" role="img" aria-labelledby="title desc">
+  <title id="title">Evolvate Consulting</title>
+  <desc id="desc">Light version of the Evolvate Consulting logo for deep green backgrounds.</desc>
+  <g fill="none" stroke-width="11" stroke-linejoin="miter">
+    <path d="M33 49H127V143H33Z" stroke="#F2F4EB"/>
+    <path d="M85 77H179V171H85Z" stroke="#A8C5B1"/>
+  </g>
+  <path d="M85 110H127" fill="none" stroke="#E39A72" stroke-width="11"/>
+  <text x="224" y="128" fill="#F2F4EB" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" letter-spacing="-4">evolvate</text>
+  <text x="229" y="159" fill="#C0D2C5" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="7">CONSULTING</text>
+</svg>
