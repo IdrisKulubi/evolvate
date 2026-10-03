@@ -13,7 +13,7 @@ export interface FounderProfile {
 export const founder: FounderProfile = {
   name: "Elizabeth",
   role: "Founder & Principal Consultant",
-  photoSrc: "/founder/founder.jpeg",
+  photoSrc: "/founder/Founder.png",
   photoAlt: "Elizabeth, Founder and Principal Consultant at Evolvate Consulting",
   bio: [
     "Evolvate is led by a consultant with hands-on experience in business development, financial management, and project delivery across Sweden and international markets.",
